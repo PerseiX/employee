@@ -1,0 +1,35 @@
+version: '3.7'
+
+services:
+    employee_app:
+        container_name: employee_app
+        build:
+            context: .
+            target: dev
+            dockerfile: .docker/app/Dockerfile
+        volumes:
+            - ./:/app:delegated
+        user: www-data
+        restart: unless-stopped
+        environment:
+            APP_USER_ID: 1000
+            APP_GROUP_ID: 1000
+        tty: true
+        depends_on:
+            - employee_mysql
+        extra_hosts:
+            - host.docker.internal:172.17.0.1
+
+    employee_mysql:
+        image: mysql:8.0.32
+        container_name: employee_mysql
+        volumes:
+            - mysql_volumes:/var/lib/mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: root
+        ports:
+            - "3306:3306"
+
+volumes:
+    mysql_volumes: ~

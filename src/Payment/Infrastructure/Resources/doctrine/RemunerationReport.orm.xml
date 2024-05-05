@@ -1,0 +1,18 @@
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                   https://raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd">
+    <entity name="App\Payment\Domain\Model\RemunerationReport"
+            table="remuneration_reports">
+        <id name="id" type="integer">
+            <generator strategy="AUTO"/>
+        </id>
+        <field name="name" length="255" column="name"/>
+        <field name="surname" length="255" column="surname"/>
+        <field name="department" length="255" column="department"/>
+        <field name="remuneration" type="decimal" precision="11" scale="2" column="remuneration"/>
+        <field name="bonus" type="decimal" precision="11" scale="2" column="bonus"/>
+        <field name="bonusType" length="255" column="bonus_type"/>
+        <field name="finalSalary" type="decimal" precision="11" scale="2" column="final_salary"/>
+    </entity>
+</doctrine-mapping>

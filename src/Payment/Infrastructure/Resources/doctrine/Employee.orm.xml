@@ -1,0 +1,16 @@
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                   https://raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd">
+    <entity name="App\Payment\Domain\Model\Employee"
+            table="employees">
+        <id name="id" type="integer">
+            <generator strategy="AUTO"/>
+        </id>
+        <field name="name" length="255" column="name"/>
+        <field name="surname" length="255" column="surname"/>
+        <field name="departmentId" type="integer" column="department_id"/>
+        <field name="baseSalary" type="decimal" precision="11" scale="2"  column="base_salary"/>
+        <field name="hiringDate" type="datetimetz_immutable" column="hiring_date"/>
+    </entity>
+</doctrine-mapping>

@@ -1,0 +1,11 @@
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                   https://raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd">
+    <entity name="App\Payment\Domain\Model\DepartmentBonusRule"
+            table="department_bonus_rules">
+        <id name="departmentId" type="integer" column="department_id"/>
+        <id name="bonusType" length="255" column="bonus_type"/>
+        <field name="configuration" type="json" column="configuration"/>
+    </entity>
+</doctrine-mapping>

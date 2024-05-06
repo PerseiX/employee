@@ -9,7 +9,7 @@ use App\Payment\Domain\Model\DepartmentBonusRule;
 use App\Payment\Domain\Policy\BonusCalculationPolicy;
 use Throwable;
 
-final class BonusCalculationPolicyFactory implements BonusCalculationPolicyFactoryInterface
+final readonly class BonusCalculationPolicyFactory implements BonusCalculationPolicyFactoryInterface
 {
     /**
      * @throws BonusCalculationPolicyCanNotBeCreatedException

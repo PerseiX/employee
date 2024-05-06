@@ -4,8 +4,7 @@ declare(strict_types=1);
 
 namespace App\Payment\Domain\Policy;
 
-use DateTimeImmutable;
-use DateTimeInterface;
+use App\Payment\Domain\Exception\BonusCalculationPolicyCanNotBeCreatedException;
 
 final class FixedBonusCalculationPolicy implements BonusCalculationPolicy
 {

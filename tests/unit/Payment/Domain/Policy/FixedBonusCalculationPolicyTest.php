@@ -2,7 +2,7 @@
 
 namespace App\Tests\unit\Payment\Domain\Policy;
 
-use App\Payment\Domain\Policy\BonusCalculationPolicyCanNotBeCreatedException;
+use App\Payment\Domain\Exception\BonusCalculationPolicyCanNotBeCreatedException;
 use App\Payment\Domain\Policy\FixedBonusCalculationPolicy;
 use PHPUnit\Framework\TestCase;
 

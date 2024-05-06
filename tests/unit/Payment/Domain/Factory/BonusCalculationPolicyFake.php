@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Tests\unit\Payment\Domain\Factory;
 
 use App\Payment\Domain\Policy\BonusCalculationPolicy;
-use App\Payment\Domain\Policy\BonusCalculationPolicyCanNotBeCreatedException;
+use App\Payment\Domain\Exception\BonusCalculationPolicyCanNotBeCreatedException;
 
 final readonly class BonusCalculationPolicyFake implements BonusCalculationPolicy
 {

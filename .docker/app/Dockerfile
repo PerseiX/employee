@@ -31,7 +31,6 @@ RUN apt-get update \
     && rm -rf /tmp/*
 
 COPY --from=composer /usr/bin/composer /usr/bin/composer
-#COPY ./.docker/app/zz-dev.ini /usr/local/etc/php/conf.d/zz-dev.ini
 
 WORKDIR /app
 VOLUME /var

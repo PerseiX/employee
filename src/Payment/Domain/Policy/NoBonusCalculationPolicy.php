@@ -6,7 +6,6 @@ namespace App\Payment\Domain\Policy;
 
 final class NoBonusCalculationPolicy implements BonusCalculationPolicy
 {
-
     public function calculateBonus(float $baseSalary, int $yearsOfExperience): float
     {
         return $baseSalary;

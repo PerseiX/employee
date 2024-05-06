@@ -4,7 +4,7 @@ namespace App\Payment\Domain\Factory;
 
 use App\Payment\Domain\Model\DepartmentBonusRule;
 use App\Payment\Domain\Policy\BonusCalculationPolicy;
-use App\Payment\Domain\Policy\BonusCalculationPolicyCanNotBeCreatedException;
+use App\Payment\Domain\Exception\BonusCalculationPolicyCanNotBeCreatedException;
 
 interface BonusCalculationPolicyFactoryInterface
 {

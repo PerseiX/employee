@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Tests\unit\Payment\Domain\Policy;
 
-use App\Payment\Domain\Policy\BonusCalculationPolicyCanNotBeCreatedException;
+use App\Payment\Domain\Exception\BonusCalculationPolicyCanNotBeCreatedException;
 use App\Payment\Domain\Policy\PercentageBonusCalculationPolicy;
 use PHPUnit\Framework\TestCase;
 
